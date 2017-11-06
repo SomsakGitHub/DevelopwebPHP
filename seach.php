@@ -1,10 +1,14 @@
 <?php
+	// Connect to database
 	require 'config.php';
 
+	// Keyword
 	$keyword = $_POST['keyword'];
 
+	// SQL seach
 	$sql = "SELECT * FROM `testt` WHERE Name='".$keyword."'";
 
+	// Working
 	$result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -31,6 +35,8 @@
 	<?php	}
 	?>
 	</table>
-<a href="index.php">Home</a>
+
+	// Link
+	<a href="index.php">Home</a>
 </body>
 </html>
