@@ -1,4 +1,5 @@
 <?php
+	// Connect to database
 	require 'config.php';
 ?>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 	<title>insert</title>
 </head>
 <body>
+	// form
 	<form action="insert_action.php" method="post">
 		<label>Name: </label>
 		<input type="text" name="Name">
