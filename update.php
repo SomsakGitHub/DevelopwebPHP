@@ -1,12 +1,16 @@
 <?php
+	// Connect to database
 	require 'config.php';
 
 	$Id = $_GET['Id'];
 
+	// SQL show id data
 	$sql = "SELECT * FROM `testt` WHERE Id=$Id";
 
+	// Working
 	$result = $conn->query($sql);
 
+	// rows = 1
 	$result->num_rows == 1;
 
 	$update = $result->fetch_array();
@@ -17,6 +21,7 @@
 	<title>update</title>
 </head>
 <body>
+	// form working
 	<form action="update_action.php" method="post">
 		<input type="hidden" name="Id" value="<?= @$update[0] ?>">
 		<label>Name: </label>
